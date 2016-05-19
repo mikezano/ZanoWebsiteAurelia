@@ -8,6 +8,7 @@ var paths = require('../paths');
 var compilerOptions = require('../babel-options');
 var assign = Object.assign || require('object.assign');
 var notify = require('gulp-notify');
+var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 
 // transpiles changed es6 files to SystemJS format
@@ -39,6 +40,15 @@ gulp.task('build-css', function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task('build-scss', function () {
+    return gulp.src(paths.scss)
+        .pipe(sass())
+       // .pipe(changed(paths.output, {extension: '.scss'}))
+        .pipe(gulp.dest(paths.outputScss))
+        .pipe(gulp.dest(paths.output))
+        .pipe(browserSync.stream());
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -46,7 +56,7 @@ gulp.task('build-css', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-css'],
+    ['build-system', 'build-html', 'build-css', 'build-scss'],
     callback
   );
 });
