@@ -25,9 +25,15 @@ body{
     border:1px solid $colorBlueLighten1;
     box-shadow:10px 10px 10px $baseVSBlack;
     overflow:hidden;
+    
+    &.animate-in{
+        @include setSizeAndPosition($mainContainerWidth, $mainContainerHeight, absolute, 50%, 100px, null, null, -1 * $mainContainerWidth/2);
+        opacity:1;       
+    }
 
     &.animate-in-add{
         @include customAnimationFrames(zanoContainer, $zano-container-animation-time, $quick-ease-in, 1, 4s, forwards);
+        opacity:1;
     }
 
     &.spin{

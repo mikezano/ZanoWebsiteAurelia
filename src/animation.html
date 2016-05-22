@@ -2,16 +2,18 @@
     
   <!--<require from="animation.css"></require>-->
     <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/mainModuleCurtains.css">
+    <link rel="stylesheet" href="styles/mainModuleTriangles.css">
      <!--<require from="animation.css"></require>-->
   <h1>Zano</h1>
   <div id="perspective-container">
-      <div id="zano-container" ref="myDiv">
+      <div id="zano-container" ref="myDiv" class="au-animate">
 
 
           <div id="current-page" ng-include="vm.currentPage"></div>
-          <div id="bottom-left-curtain"></div>
+          <div id="bottom-left-curtain" ></div>
           <div id="top-right-curtain"></div>
-          <div id="bottom-left-triangle"></div>
+          <div id="bottom-left-triangle" ref="leftTriangle"></div>
           <div id="top-right-triangle"></div>
 
           {{vm.currentPage}}

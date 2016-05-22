@@ -13,21 +13,30 @@ export class Animation {
     }
     
     attached(){
-          console.log(this.myDiv);
-          
-          this.animator.addClass(this.myDiv, 'animate-in').then(()=>{
-             // this.animator.removeClass(this.myDiv, 'animate-in');
+          console.log(this.myDiv);    
+          console.log("attached");
+          var here = this;
+          setTimeout(function(){
+            here.animator.addClass(here.myDiv, 'animate-in').then((f)=>{
+            console.log(f);
+                 here.animator.addClass(here.leftTriangle, 'animate-in').then((f)=>{
+                     console.log('curtain');
+                 });
+                    //this.animator.removeClass(this.myDiv, 'animate-in');
              console.log('done'); 
-          });
-    }
-    
+          });                
+          },10);
 
+    }
+   
      activated() {
         console.log("activated");
     }
  
     created() {
         console.log("created");
+        //console.log(this.myDiv);    
+      
     }
  
     activate() {
