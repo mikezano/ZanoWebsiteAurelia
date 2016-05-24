@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {inject} from 'aurelia-framework';
 import {CssAnimator} from 'aurelia-animator-css';
 import 'fetch';
@@ -17,18 +17,24 @@ export class Animation {
           console.log(this.myDiv);    
           console.log("attached");
           var here = this;
-          setTimeout(function(){
-            here.animator.addClass(here.myDiv, 'animate-in').then((f)=>{
-            console.log(f);
-                 here.animator.addClass(here.leftTriangle, 'animate-in').then((f)=>{
-                     console.log('curtain');
-                 });
-                 here.animator.addClass(here.rightTriangle, 'animate-in');
-                    //this.animator.removeClass(this.myDiv, 'animate-in');
-             console.log('done'); 
-          });                
-          },10);
+          setTimeout(function(){here.intro()},10);
 
+    }
+    
+    intro(){
+        this.animator.addClass(this.myDiv, 'animate-in').then((f)=>{
+            this.animator.addClass(this.leftTriangle, 'animate-in');
+            return this.animator.addClass(this.rightTriangle, 'animate-in');
+
+        }).then((f)=>{
+            this.animator.addClass(this.leftCurtain, 'animate-out');
+            //  this.animator.addClass(this.leftCurtain, 'animate-out').then((f)=>{
+            //      this.animator.addClass(this.rightCurtain, 'animate-out');
+            //  }      
+            //  );
+             
+             
+        });
     }
    
      activated() {
@@ -48,9 +54,4 @@ export class Animation {
     canActivate() {
         console.log("canActivate");
     }    
-=======
-
-export class Animation {
-
->>>>>>> 85ec11040724f0c021b83c686559be356ad2259b
 }

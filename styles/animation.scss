@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 
 @import 'helpers/helperMixins.scss';
 @import 'helpers/helperVars.scss';
-
-=======
->>>>>>> 85ec11040724f0c021b83c686559be356ad2259b
-$color: green;
-$color2: orange;
-div{
-   color:$color;
-<<<<<<< HEAD
-}
 
 body{
     font-family: 'Orbitron', sans-serif;
@@ -31,13 +21,14 @@ body{
     overflow:hidden;
     
     &.animate-in{
+        opacity:1;
         @include setSizeAndPosition($mainContainerWidth, $mainContainerHeight, absolute, 50%, 100px, null, null, -1 * $mainContainerWidth/2);
-        //opacity:1;       
+               
     }
 
     &.animate-in-add{
+        opacity:0;
         @include customAnimationFrames(zanoContainer, $zano-container-animation-time, $quick-ease-in, 1, 4s, forwards);
-        opacity:1;
     }
 
     &.spin{
@@ -115,6 +106,4 @@ body{
         font-size:36px;
         margin-top:20px;
     }
-=======
->>>>>>> 85ec11040724f0c021b83c686559be356ad2259b
 }

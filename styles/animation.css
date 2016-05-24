@@ -1,7 +1,3 @@
-div {
-  color: green; }
-<<<<<<< HEAD
-
 body {
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(#303030, #444444 45%, #444444 55%, #303030);
@@ -21,7 +17,16 @@ body {
   border: 1px solid #006f9f;
   box-shadow: 10px 10px 10px #303030;
   overflow: hidden; }
+  #zano-container.animate-in {
+    opacity: 1;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -300px; }
   #zano-container.animate-in-add {
+    opacity: 0;
     -moz-animation: zanoContainer 1000ms cubic-bezier(0.19, 0.92, 0.23, 1) 1;
     -o-animation: zanoContainer 1000ms cubic-bezier(0.19, 0.92, 0.23, 1) 1;
     -webkit-animation: zanoContainer 1000ms cubic-bezier(0.19, 0.92, 0.23, 1) 1;
@@ -208,5 +213,3 @@ body {
     top: 0;
     font-size: 36px;
     margin-top: 20px; } }
-=======
->>>>>>> 85ec11040724f0c021b83c686559be356ad2259b

@@ -11,7 +11,7 @@ $triangleSize:300px;
         -1 *$triangleSize, 
         null, 
         null, 
-        -1 *$triangleSize, 
+        0, 
         null
     );
 
@@ -26,6 +26,11 @@ $triangleSize:300px;
     );
     
     &.animate-in{
+        left:0;
+        z-index:10;
+    }
+
+    &.animate-in-add{
         @include customAnimationFrames(
             bottom-left-triangle, 
             $triangle-animation-time, 
@@ -40,8 +45,7 @@ $triangleSize:300px;
 @include customKeyFrames(bottom-left-triangle){
     100%{
         left:0;
-        bottom:0;
-        //z-index:-1;
+        z-index:10;
     }
 }
 
@@ -65,8 +69,13 @@ $triangleSize:300px;
         $colorBlueDarken2 80%, 
         #303030
     );
-   
+    
     &.animate-in{
+        top:0;
+        right:0;
+    }
+
+    &.animate-in-add{
         @include customAnimationFrames(
             top-right-triangle, 
             $triangle-animation-time, 
