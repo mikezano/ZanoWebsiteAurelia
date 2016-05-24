@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {inject} from 'aurelia-framework';
 import {CssAnimator} from 'aurelia-animator-css';
 import 'fetch';
@@ -47,4 +48,9 @@ export class Animation {
     canActivate() {
         console.log("canActivate");
     }    
+=======
+
+export class Animation {
+
+>>>>>>> 85ec11040724f0c021b83c686559be356ad2259b
 }
