@@ -22,6 +22,7 @@ export class Animation {
                  here.animator.addClass(here.leftTriangle, 'animate-in').then((f)=>{
                      console.log('curtain');
                  });
+                 here.animator.addClass(here.rightTriangle, 'animate-in');
                     //this.animator.removeClass(this.myDiv, 'animate-in');
              console.log('done'); 
           });                

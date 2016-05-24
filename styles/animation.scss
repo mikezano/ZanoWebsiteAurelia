@@ -28,7 +28,7 @@ body{
     
     &.animate-in{
         @include setSizeAndPosition($mainContainerWidth, $mainContainerHeight, absolute, 50%, 100px, null, null, -1 * $mainContainerWidth/2);
-        opacity:1;       
+        //opacity:1;       
     }
 
     &.animate-in-add{
