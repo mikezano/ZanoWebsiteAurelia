@@ -1,6 +1,7 @@
 
 import {inject} from 'aurelia-framework';
 import {CssAnimator} from 'aurelia-animator-css';
+import {VelocityAnimator} from 'aurelia-animator-velocity';
 import 'fetch';
 
 @inject(Element, CssAnimator)
