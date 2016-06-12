@@ -9,7 +9,7 @@ export function configure(aurelia) {
   aurelia.use.plugin('aurelia-animator-css');
   //if the css animator is enabled, add swap-order="after" to all router-view elements
 
-  //aurelia.use.plugin('aurelia-animator-velocity');
+  aurelia.use.plugin('aurelia-animator-velocity');
   //aurelia.use.plugin('gooy/aurelia-animator-velocity');
 
   //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
